@@ -1,6 +1,8 @@
 <?php
 return [
-    'adminEmail' => 'admin@example.com',
-    'supportEmail' => 'support@example.com',
+    'adminEmail' => 'admin@sirton.store',
+    'supportEmail' => 'support@sirton.store',
     'user.passwordResetTokenExpire' => 3600,
+    'siteName' => 'Sirton Store',
+    'siteDesc' => 'Sirton store is a website for buy and sell videos'
 ];
