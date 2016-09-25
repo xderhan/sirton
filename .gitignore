@@ -13,7 +13,9 @@ nbproject
 .settings
 
 # Log directory
+log
 /log
+/log/*
 
 # windows thumbnail cache
 Thumbs.db
