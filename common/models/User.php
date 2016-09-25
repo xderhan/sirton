@@ -186,4 +186,16 @@ class User extends ActiveRecord implements IdentityInterface
     {
         $this->password_reset_token = null;
     }
+
+    /**
+     * Check if is admin
+     */
+    public function isAdmin()
+    {
+        $adminEmail = Yii::$app->params['adminEmail'];
+        if ($this->email == $adminEmail) {
+            return true;
+        }
+        return false;
+    }
 }

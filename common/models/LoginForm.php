@@ -51,11 +51,20 @@ class LoginForm extends Model
     /**
      * Logs in a user using the provided username and password.
      *
+     * @var booelean $adminOnly Variable to allow admin only to login
      * @return boolean whether the user is logged in successfully
      */
-    public function login()
+    public function login($adminOnly = false)
     {
         if ($this->validate()) {
+            if($adminOnly) {
+                $isAdmin = $this->getUser()->isAdmin();
+                if(!$isAdmin) {
+                    $this->addError('username', 'Authorized user only');
+                    return false;
+                }
+            }
+
             return Yii::$app->user->login($this->getUser(), $this->rememberMe ? 3600 * 24 * 30 : 0);
         } else {
             return false;
