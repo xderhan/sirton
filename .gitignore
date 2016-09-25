@@ -12,6 +12,9 @@ nbproject
 .project
 .settings
 
+# Log directory
+/log
+
 # windows thumbnail cache
 Thumbs.db
 
