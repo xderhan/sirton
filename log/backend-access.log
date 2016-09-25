@@ -1,0 +1,8 @@
+127.0.0.1 - - [25/Sep/2016:04:07:31 -0700] "GET / HTTP/1.1" 200 1945 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:49.0) Gecko/20100101 Firefox/49.0"
+127.0.0.1 - - [25/Sep/2016:04:07:42 -0700] "GET /favicon.ico HTTP/1.1" 200 1451 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:49.0) Gecko/20100101 Firefox/49.0"
+127.0.0.1 - - [25/Sep/2016:04:07:43 -0700] "GET /favicon.ico HTTP/1.1" 304 180 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:49.0) Gecko/20100101 Firefox/49.0"
+127.0.0.1 - - [25/Sep/2016:04:07:59 -0700] "GET / HTTP/1.1" 200 1939 "http://back.sirton.loc/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:49.0) Gecko/20100101 Firefox/49.0"
+127.0.0.1 - - [25/Sep/2016:04:07:59 -0700] "GET /assets/c331e552/css/bootstrap.css HTTP/1.1" 200 21669 "http://back.sirton.loc/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:49.0) Gecko/20100101 Firefox/49.0"
+127.0.0.1 - - [25/Sep/2016:04:07:59 -0700] "GET /assets/c331e552/js/bootstrap.js HTTP/1.1" 200 14798 "http://back.sirton.loc/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:49.0) Gecko/20100101 Firefox/49.0"
+127.0.0.1 - - [25/Sep/2016:04:07:59 -0700] "GET /assets/a3ecde6/yii.js HTTP/1.1" 200 4628 "http://back.sirton.loc/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:49.0) Gecko/20100101 Firefox/49.0"
+127.0.0.1 - - [25/Sep/2016:04:07:59 -0700] "GET /assets/5bbecc8e/jquery.js HTTP/1.1" 200 77048 "http://back.sirton.loc/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:49.0) Gecko/20100101 Firefox/49.0"
