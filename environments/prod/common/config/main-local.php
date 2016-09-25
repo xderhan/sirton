@@ -4,8 +4,8 @@ return [
         'db' => [
             'class' => 'yii\db\Connection',
             'dsn' => 'mysql:host=localhost;dbname=sirton_store',
-            'username' => 'root',
-            'password' => 'root',
+            'username' => 'sirton_sirton',
+            'password' => 'sFpL]rwn1p*V',
             'charset' => 'utf8',
         ],
         'mailer' => [
