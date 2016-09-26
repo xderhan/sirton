@@ -9,8 +9,8 @@ use yii\base\Model;
  */
 class CrawlerForm extends Model
 {
-    public $link;
-    public $params;
+    public $link = 'https://news.google.com/';
+    public $params = 'span.titletext';
 
     /**
      * @inheritdoc
@@ -30,7 +30,7 @@ class CrawlerForm extends Model
     {
         return [
             'link' => 'Site URL',
-            'params' => 'Scrapping Parameters'
+            'params' => 'Scraping Parameters'
         ];
     }
 }

@@ -5,7 +5,7 @@ use yii\helpers\Html;
 
 /* @var $this yii\web\View */
 
-$this->title = 'Crawler';
+$this->title = 'Scraper';
 //$this->params['breadcrumbs'][] = $this->title;
 $this->registerJsFile('@web/js/pace.min.js');
 $this->registerCssFile('@web/css/pace.css');
@@ -13,8 +13,8 @@ $this->registerCssFile('@web/css/pace.css');
 <div class="crawler-form">
     <div class="row">
         <div class="col-lg-6">
-            <h1>Content Crawler &amp; Scraper</h1>
-            <p>Please fill out the following fields to do crawling and scraping:</p>
+            <h1>Content Scraper</h1>
+            <p>Please fill out the following fields to do scraping:</p>
             <div class="well">
                 <?php $form = ActiveForm::begin([
                     'options' => [
