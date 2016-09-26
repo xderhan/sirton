@@ -9,7 +9,7 @@ use yii\base\Model;
  */
 class CrawlerForm extends Model
 {
-    public $link = 'https://news.google.com/';
+    public $link = 'http://news.google.com/';
     public $params = 'span.titletext';
 
     /**
