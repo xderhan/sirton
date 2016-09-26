@@ -31,6 +31,7 @@ $params = Yii::$app->params;
     <div class="container">
         <?php
         NavBar::begin([
+            'id' => 'page-navbar',
             'brandLabel' => $params['siteName'],
             'brandUrl' => Yii::$app->homeUrl,
             'innerContainerOptions' => [
