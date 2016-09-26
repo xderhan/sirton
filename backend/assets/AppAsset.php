@@ -13,9 +13,11 @@ class AppAsset extends AssetBundle
     public $baseUrl = '@web';
     public $css = [
         'css/lumen.bootstrap.min.css',
+        // 'css/pace.css',
         'css/site.css',
     ];
     public $js = [
+        // 'js/pace.min.js'
     ];
     public $depends = [
         'yii\web\YiiAsset',

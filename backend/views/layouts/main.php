@@ -40,12 +40,16 @@ $params = Yii::$app->params;
                 'class' => 'navbar navbar-default',
             ],
         ]);
-        $menuItems = [
-            ['label' => 'Home', 'url' => ['/site/index']],
-        ];
+
         if (Yii::$app->user->isGuest) {
+            // Configure the menu items in params.php
+            $menuItems = $params['guestMenuItems'];
+
             $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
         } else {
+            // Configure the menu items in params.php
+            $menuItems = $params['userMenuItems'];
+
             $menuItems[] = '<li>'
                 . Html::beginForm(['/site/logout'], 'post')
                 . Html::submitButton(

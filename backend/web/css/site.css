@@ -32,6 +32,11 @@ body {
     font-style: italic;
 }
 
+.crawler-form {
+    padding-bottom: 60px;
+}
+
+
 /* add sorting icons to gridview sort links */
 a.asc:after, a.desc:after {
     position: relative;
