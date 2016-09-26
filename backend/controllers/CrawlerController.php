@@ -8,6 +8,8 @@ use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
 use yii\widgets\ActiveForm;
 use common\models\CrawlerForm;
+use Goutte\Client;
+
 
 class CrawlerController extends Controller
 {
@@ -52,10 +54,22 @@ class CrawlerController extends Controller
     {
         $model = $this->getCrawlerForm();
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
+            $link = $model->link;
+            $params = $model->params;
+
+            $client = new Client();
+            $crawler = $client->request('GET', $link);
+
+            $paramsArray = explode("\n", $params);
+            $paramsData = [];
+            foreach ($paramsArray as $p) {
+                $paramsData[$p] = $crawler->filter($p);
+            }
+
             if (Yii::$app->request->isPjax) {
-                return $this->renderPartial('result');
+                return $this->renderPartial('result', ['data' => $paramsData]);
             } else {
-                return $this->render('result');
+                return $this->render('result', ['data' => $paramsData]);
             }
         } else {
             if (Yii::$app->request->isPjax) {
