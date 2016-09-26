@@ -1,6 +1,8 @@
 <?php
 namespace backend\controllers;
 
+require_once 'phar://../models/goutte-v2.0.4.phar';
+
 use Yii;
 use yii\web\Response;
 use yii\web\Controller;
@@ -8,8 +10,8 @@ use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
 use yii\widgets\ActiveForm;
 use common\models\CrawlerForm;
-use Guzzle\Http\Client;
-use Symfony\Component\DomCrawler\Crawler;
+use Goutte\Client;
+
 
 class CrawlerController extends Controller
 {
@@ -58,10 +60,7 @@ class CrawlerController extends Controller
             $params = $model->params;
 
             $client = new Client();
-            $request = $client->get($link);
-            $response = $request->send();
-
-            $crawler = new Crawler($response->getBody(true));
+            $crawler = $client->request('GET', $link);
 
             $paramsArray = explode("\n", $params);
             $paramsData = [];
